@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Express handlebars</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+<form ref='uploadForm'
+      id='uploadForm'
+      action='http://127.0.0.1:3000/upload'
+      method='post'
+      encType="multipart/form-data"
+>
+    <div class="wrapper">
+        <div class="file-upload">
+            <input type="file" name="file" accept="image/jpeg, image/jpg" onchange="submitForm()"/>
+            <i class="fa fa-arrow-up"></i>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    function submitForm() {
+        document.getElementById('uploadForm').submit();
+    }
+</script>
+</body>
+</html>
